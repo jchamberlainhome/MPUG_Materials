@@ -1,0 +1,7 @@
+Update your Directory Settings before running Power Query in Excel. This is the MPUG Demo PQ code to change
+
+let
+    Source = Folder.Files("C:\ENTER YOUR PATH HERE"),
+    #"Filtered Rows" = Table.SelectRows(Source, each ([Name] = "ENTER YOUR EXCEL FILE NAME HERE.xlsx" or [Name] = "ENTER YOUR SCHEDULE NAME HERE.mpp"))
+in
+    #"Filtered Rows"
